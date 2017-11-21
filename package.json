@@ -1,0 +1,26 @@
+{
+  "name": "Notice",
+  "private": "true",
+  "version": "0.0.1",
+  "description": "CEFC-UI Component",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "node_modules/.bin/tools run build",
+    "server": "node_modules/.bin/tools run server",
+    "lint": "node_modules/.bin/tools run lint"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cefc-utils/tools": "^1.0.22"
+  },
+  "devDependencies": {
+    "react-dom": "^0.14.7",
+    "react-css-modules": "^3.7.10",
+    "react": "^0.14.7",
+    "classnames": "^2.2.5"
+  }
+}
