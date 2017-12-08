@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import MsgModal from '@cefc-ui/MsgModal'
 import styles from './style/index.less'
-import createCSSModules from 'react-css-modules';
 
 class Notice extends Component {
     state = {
@@ -93,17 +92,17 @@ class Notice extends Component {
         let nextPage = pagenum !== totalPage;
 
         return (
-            <div styleName="container">
-              <div styleName="contentTitle">
+            <div className="container">
+              <div className="contentTitle">
                   {data[pagenum - 1].noticeTitle}
               </div>
-              <div styleName="contentNotice" dangerouslySetInnerHTML={{
+              <div className="contentNotice" dangerouslySetInnerHTML={{
                   __html: data[pagenum - 1].noticeContent.replace(/[\r\n]/g, '<br/>')
               }} />
-              <div styleName="pagination">
-                <div onClick={this.setUp(pagenum)} styleName={preBtnCls}>上一条</div>
-                <div styleName="page"> {pagenum}/{totalPage}</div>
-                <div onClick={this.setNext} styleName="btn">{nextPage ? "下一条" : "回到第一条"}</div>
+              <div className="pagination">
+                <div onClick={this.setUp(pagenum)} className={preBtnCls}>上一条</div>
+                <div className="page"> {pagenum}/{totalPage}</div>
+                <div onClick={this.setNext} className="btn">{nextPage ? "下一条" : "回到第一条"}</div>
               </div>
             </div>
         );
@@ -114,10 +113,10 @@ class Notice extends Component {
 
         return (
             <div>
-              <div className={stl.containerTitle}>
+              <div className="containerTitle">
                   {data[0].noticeTitle}
               </div>
-              <div className={stl.singleNotice} dangerouslySetInnerHTML={{
+              <div className="singleNotice" dangerouslySetInnerHTML={{
                   __html: data[0].noticeContent.replace(/[\r\n]/g, '<br/>')
               }} />
             </div>
@@ -157,6 +156,5 @@ Notice.defaultProps = {
     }
 };
 
-export default createCSSModules(Notice, styles, {
-    allowMultiple: true
-});
+export default Notice;
+ 

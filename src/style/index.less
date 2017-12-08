@@ -1,0 +1,61 @@
+@import "../../node_modules/cefc-ui-style/src/mixins/utils.less";
+@import "../../@{theme}";
+.container {
+    flex: 1;
+    align-self: flex-start;
+    margin-top: 0.1rem;
+}
+
+.contentNotice,
+.singleNotice {
+    max-height: 3rem;
+    overflow-y: scroll;
+    text-align: justify;
+    margin-top: 0.1rem;
+    .setFont(@font-size-medium, #929292);
+}
+
+.container>.contentTitle,
+.containerTitle {
+    max-height: 3rem;
+    margin-top: 0.1rem;
+    .setFont(@font-size-big, #565656);
+    text-align: center;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0.15rem 0;
+}
+
+.btn {
+    border: 1px solid #5995EF;
+    width: 1.2rem;
+    border-radius: 0.05rem;
+    color: #5995EF;
+    padding: .05rem 0;
+}
+
+.prevBtnChange {
+    opacity: 0.2;
+}
+
+.page {
+    flex: 1;
+}
+
+.cefc-button {
+    background-color: @brand-wait;
+    width: 100%;
+    height: 0.44rem;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    line-height: inherit;
+    text-align: center;
+    border: 0;
+    border-radius: 0.05rem;
+    color: @color-text-base-inverse;
+}
